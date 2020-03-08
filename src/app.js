@@ -1,11 +1,23 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import IndecisionApp from './components/IndecisionApp'
+import { Provider } from 'react-redux';
+import AppRouter from './routers/AppRouter.js'
+import configureStore from './store/configureStore'
+import { addExpense, removeExpense, editExpense } from './actions/expenses'
+import { setTextFilter } from './actions/filters'
+import getVisibleExpenses from './selectors/expenses'
 import 'normalize.css/normalize.css';
-import './styles/styles.scss'
+import './styles/styles.scss';
 
+const store = configureStore();
 
-ReactDOM.render(<IndecisionApp />, document.getElementById('app'))
+const jsx = (
+    <Provider store={store}>
+        <AppRouter />
+    </Provider>
+);
+
+ReactDOM.render(jsx, document.getElementById('app'))
 
  

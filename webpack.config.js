@@ -21,8 +21,9 @@ module.exports = {
         }]
     },
     devtool: 'cheap-module-eval-source-map', //this is the source-map, this is dev, will add production version later,
-    devServer: { //Repl for live-server w/mroe dev features. live-server used in production
+    devServer: { //Repl for live-server w/more dev features. live-server used in production
         contentBase: path.join(__dirname, 'public'),
+        historyApiFallback: true //This allows other routes to render
     }
 }
 
