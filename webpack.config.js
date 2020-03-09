@@ -7,7 +7,7 @@ module.exports = (env) => {
     return {
         entry: "./src/app.js",
         output: {
-            path: path.join(__dirname, 'public'),
+            path: path.join(__dirname, 'public', 'dist'),
             filename: 'bundle.js'
         },
         module: {
@@ -41,7 +41,8 @@ module.exports = (env) => {
         devtool: isProduction ? 'source-map' : 'inline-source-map', 
         devServer: { //Repl for live-server w/more dev features. live-server used in production
             contentBase: path.join(__dirname, 'public'),
-            historyApiFallback: true //This allows other routes to render
+            historyApiFallback: true, //This allows other routes to render
+            publicPath: '/dist/'
         }
     }
 };
