@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "live-server": "^1.2.1",
-    "webpack-dev-server": "^2.5.1"
+    "webpack-dev-server": "^2.5.1",
+    "dotenv": "^4.0.0"
   }
 }
