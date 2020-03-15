@@ -1,7 +1,7 @@
 
 import * as firebase from 'firebase';
 
-const firebaseConfig = {
+const config = {
     apiKey: "AIzaSyCKgT89gU7fSTwzEd6CuQVuihFEtu-6Vak",
     authDomain: "expenses-31bc7.firebaseapp.com",
     databaseURL: "https://expenses-31bc7.firebaseio.com",
@@ -10,9 +10,9 @@ const firebaseConfig = {
     messagingSenderId: "212120746922",
     appId: "1:212120746922:web:aca63abf5fde2cd77609d3",
     measurementId: "G-7E80CH4V0G"
-  };
+    };
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(config);
 
 const database = firebase.database();
 

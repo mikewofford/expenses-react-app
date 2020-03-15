@@ -47,6 +47,7 @@
   "devDependencies": {
     "live-server": "^1.2.1",
     "webpack-dev-server": "^2.5.1",
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "cross-env": "^5.0.5"
   }
 }
